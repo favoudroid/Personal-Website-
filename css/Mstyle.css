@@ -436,7 +436,8 @@ hr{
 
 /*Project Cards stylying*/
 .product-card{
-   width:600px;
+   width:90px;
+   max-width:600px;
    margin:40px auto;
    background: #f0f0eb;
    border-radius:25px;
@@ -655,6 +656,14 @@ textarea{
 /* General Responsiveness*/
 /*Mobile view*/
 @media(max-width:600px){
+    .hero{
+        display:grid;
+        grid-template-columns: 1fr;
+        justify-items:center;
+        text-align:center;
+        width:90%;
+        gap:25%;
+    }
     .navBar{
         flex-direction:column;
         align-items:flex-start;
@@ -676,6 +685,9 @@ textarea{
         flex-direction:column;
         padding:0 5%;
     }
+    .skills, .interest{
+        padding:0 5%;
+    }
     .edu-items{
         grid-template-columns: 1fr;
     }
@@ -689,9 +701,13 @@ textarea{
     }
 
     /*Project.html*/
-    #cads{
-        flex-direction: column;
+    #cards{
+        display:grid;
+        grid-template-columns: 1fr;
         width:90%;
+    }
+    .projects{
+        max-width:100%;
     }
 
     /*Contact.html*/
@@ -700,6 +716,15 @@ textarea{
     }
     .contact{
         width:90%;
+    }
+
+    /*Product cards styling*/
+    main{
+        padding:25px 5%;
+    }
+    .features-con{
+        flex-direction:column;
+        align-items:center;
     }
 }
 
@@ -720,7 +745,13 @@ textarea{
         gap:25px;
     }
     #cards{
-        flex-wrap:wrap;
+        display:grid;
+        grid-template-columns:repeat(2, 1fr);
+        width:90%;
+        justify-content:center;
+    }
+    .projects{
+        max-width: 100%;
     }
 }
 
