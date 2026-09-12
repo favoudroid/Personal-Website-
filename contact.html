@@ -4,45 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Website</title>
-    <link rel="stylesheet" href="Mstyle.css">
+    <link rel="stylesheet"  href="css/Mstyle.css">
 </head>
 <body>
     
-    <div id="Main">
         <nav class="navBar">
-            <div class="Logo">F</div>
-                <span class="logo-text">F-Global Webs</span>
+            <div class="Logo">F-Global Webs 🤍</div>
             
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="project.html">Project</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact Me</a></li>
             </ul>
         </nav>
 
-        <form>
-            <label>Full Name</label>
-            <input type="text" name="fullname" required>
+        <section class="contact">
+            <p class="small-title">- &nbsp; Get In Touch</p>
+            <h1>Contact <span>Me</span></h1>
 
-            <label>Email</label>
-            <input type="email" name="email" required>
+            <p class="intro">I'd love to hear from you! whether you have a question or a project idea,
+                feel free to reach out.
+            </p>
 
-            <label>Subject</label>
-            <input type="text" name="subject" required>
+            <div class="contact-con">
+                <div class="contact-info">
+                    <div class="info">
+                        <div class="icon">✉️</div>
+                        <div>
+                            <h3>Email</h3><p>favourehiagwina23@gmail.com</p>
+                        </div>
+                    </div>
 
-            <label>Message</label>
-            <textarea name="message" required></textarea>
+                    <div class="info">
+                        <div class="icon">📞</div>
+                        <div>
+                            <h3>Phone</h3><p>+234 705 476 6141</p>
+                        </div>
+                    </div>
 
-            <button type="submit">Send</button>
-        </form>
+                    <div class="info">
+                        <div class="icon">in</div>
+                        <div>
+                            <h3>LinkedIn</h3><p>linkedin.com/in/Favour Ehiagwina</p>
+                        </div>
+                    </div>
+                </div>
 
-        <p>Email: <a href="favourehiagwina23@gmail.com">favourehiagwina23@gmail.com</a></p>
-        <p>Phone: +234-705-476-6141</p>
+                <div class="message-box">
+                    <h2>- &nbsp; Send a Message</h2>
+                    <p>Drop a message and I'll respond as soon as I can.</p>
 
-        <div class="button"><button class="bttn"><a href="project.html">Go Back</a></button>
-            <button class="bttn"><a href="index.html">Home</a></button></div> 
-    </div>
+                    <form action="mailto:favourehiagwina23@gmail.com" method="post" enctype="text/plain">
+                    <div class="row">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="Full Name" required>
 
+                        <label>Email</label>
+                        <input type="email" placeholder="yourmail@gmail.com" required>
+                </div>
+
+                        <label>Subject</label>
+                        <input type="text" placeholder="Topic">
+
+                        <label>Description</label>
+                        <textarea placeholder="Your Message"></textarea>
+
+                        <button type="submit" class="btn"><a href="mailto:favourehiagwina23@gmail.com">Submit</a></button>
+                        <button type="submit" class="bttn"><a href="index.html">Back</a></button>
+                    </form>
+                </div>
+            </div>
+        </section>
 </body>
 </html>
