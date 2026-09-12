@@ -6,13 +6,21 @@
 }
 
 html, body{
-    height:100%;
+    min-height:100%;
 }
 
 body{
+    min-height: 100vh;
+    display:flex;
+    flex-direction:column;
     background-color: #080910;
     color:#ffffff;
     font-family:Arial, sans-serif;
+}
+
+.Main{
+    flex:1;
+    padding:5px;
 }
 
 .navBar{
@@ -172,7 +180,7 @@ footer{
     font-size: 12px;
     color:#6b6f7a;
     padding: 20px;
-    margin: 40px;
+    margin-top:auto;
 }
 
 /*ABOUT STYLING*/
@@ -241,8 +249,8 @@ footer{
     content:"";
     position:absolute;
     left:5px;
-    top:12px;
-    bottom:-25px;
+    top:0px;
+    bottom:0px;
     width:2px;
     background:#fff4e6;
 }
@@ -657,27 +665,43 @@ textarea{
 /*Mobile view*/
 @media(max-width:600px){
     .hero{
-        display:grid;
-        grid-template-columns: 1fr;
-        justify-items:center;
-        text-align:center;
+        display:flex;
+        flex-direction:column-reverse;
+        justify-items:left;
+        text-align:justify;
         width:90%;
         gap:25%;
     }
     .navBar{
         flex-direction:column;
         align-items:flex-start;
-        padding:15px 5%;
-        gap:15px;
+        padding:5px;
+        gap:5px;
+    }
+
+    .logo{
+        font-size:15px;
+    }
+    .nav a{
+        font-size:10px;
+        padding:5px;
     }
 
     nav ul{
         flex-wrap:wrap;
-        gap:12px;
+        gap:10px;
         width:100%;
     }
 
     /*About.html*/
+    .about{
+        display:flex;
+        flex-direction:column-reverse;
+        justify-items:left;
+        text-align:justify;
+        width:90%;
+        gap:25%;
+    }
     .bio, .text2{
         flex-direction:column;
     }
@@ -690,6 +714,10 @@ textarea{
     }
     .edu-items{
         grid-template-columns: 1fr;
+    }
+    .edu-items::before{
+        top:10px;
+        bottom:10px;
     }
     .skills ul{
         grid-template-columns: repeat(2, 1fr);
@@ -710,6 +738,18 @@ textarea{
         max-width:100%;
     }
 
+    /*Product cards styling*/
+    .product-card{
+        padding:3px;
+    }
+    main{
+        padding:5px;
+    }
+    .features-con{
+        flex-direction:row;
+        align-items:center;
+    }
+
     /*Contact.html*/
     .contact-con{
         grid-template-columns: 1fr;
@@ -718,14 +758,6 @@ textarea{
         width:90%;
     }
 
-    /*Product cards styling*/
-    main{
-        padding:25px 5%;
-    }
-    .features-con{
-        flex-direction:column;
-        align-items:center;
-    }
 }
 
 /*Tablet view*/
