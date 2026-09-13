@@ -237,39 +237,21 @@ footer{
     margin-bottom:20px;
 }
 
-.edu-items{
-    display:grid;
-    grid-template-columns: 20px 1fr;
-    column-gap:15px;
-    position:relative;
-    margin-bottom: 25px;
+.edu-list{
+    list-style:none;
+    padding:0;
+    margin:0;
 }
 
-.edu-items::before{
-    content:"";
-    position:absolute;
-    left:5px;
-    top:0px;
-    bottom:0px;
-    width:2px;
-    background:#fff4e6;
+.edu-list li{
+    border-left:2px solid #ff8c00;
+    padding:0 0 20px 15px;
+    margin-bottom: 15px;
 }
 
-.edu-items:last-child::before{
-    bottom:0;
-}
-
-.dot{
-    width:12px;
-    height: 12px;
-    background:#fff4e6;
-    border-radius: 50%;
-    margin-top:5px;
-    z-index:2;
-}
-
-.education-content{
-    min-width:0;
+.edu-list li:last-child{
+    margin-bottom:0;
+    padding-bottom:0;
 }
 
 .edu-title{
@@ -444,7 +426,7 @@ hr{
 
 /*Project Cards stylying*/
 .product-card{
-   width:90px;
+   width:90%;
    max-width:600px;
    margin:40px auto;
    background: #f0f0eb;
@@ -694,6 +676,10 @@ textarea{
    }
    .bio h1{
     font-size: 28px;
+   }
+   .edu-title{
+    flex-direction:column;
+    gap:2px;
    }
    .skills ul{
     grid-template-columns: repeat(2, 1fr);
